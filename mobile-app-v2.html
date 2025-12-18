@@ -377,7 +377,7 @@
 
     <header>
         <div class="header-main">
-            <h1 id="app-title">AI Prompt Library <span class="version-badge">v2.4</span></h1>
+            <h1 id="app-title">AI Prompt Library <span class="version-badge">v2.5</span></h1>
             <div style="display:flex; gap:10px; align-items:center;">
                 <button class="lang-switch-btn" onclick="toggleLang()" id="lang-btn">CN / EN</button>
             </div>
@@ -632,6 +632,72 @@ Create a thread explaining「{{topic}}」to a general audience.
 
 5/ [Call to action / Question]
 ...`
+            },
+            // --- Nano Banana Pro (Imagen 3) 专家模块 ---
+            {
+                id: 'nbp1',
+                title: 'Nano Banana Pro 产品一致性',
+                category: 'visual',
+                desc: '[专家模式] 利用 Imagen 3 的强指令遵循力，在不同场景中保持同一产品的高度一致。',
+                content: `# Role: 商业摄影大师
+你正在为一款高端产品设计一组多场景营销海报。
+
+# Context:
+使用 Nano Banana Pro (Imagen 3) 进行创作，该模型擅长细节还原和场景一致性。
+
+# Task:
+请在以下四个差异化场景中展示「{{产品名称}}」：
+1. **办公场景**：放置在极简主义办公桌，光影自然，背景有模糊的笔记本电脑。
+2. **户外场景**：放置在森林徒步背包旁，带有露珠和清晨阳光。
+3. **居家场景**：放置在温馨的客厅茶几，旁边有绿植和杂志。
+4. **专业展台**：纯白底加冷色调边缘光，突出产品工业质感。
+
+# Constraints:
+- 保持产品角度、材质、标志位置绝对一致。
+- 电影级构图，85mm焦距，F1.8光圈效果。
+- 比例：--ar 16:9`
+            },
+            {
+                id: 'nbp2',
+                title: 'Nano Banana Pro 精准文本海报',
+                category: 'visual',
+                desc: '[专家模式] 解决 AI 绘图写错字的痛点，利用其卓越的中文/英文排版能力制作设计稿。',
+                content: `# Role: 资深平面设计师
+你擅长将文字与视觉完美融合，创造出具有冲击力的海报。
+
+# Task:
+请生成一张包含精准文字的海报。
+
+# Design Specs:
+- **核心文本**：「{{中文/英文标题}}」
+- **排版要求**：文字置于画面{{位置}}，使用{{风格}}字体。
+- **视觉背景**：{{背景描述}}
+- **质感要求**：文字需具有金属浮雕/霓虹闪烁/油墨渗透效果。
+
+# Prompt:
+[Style]: High-end Graphic Design
+[Typography]: Accurate Chinese/English characters rendering
+[Resolution]: 4K High Definition
+[Aspect Ratio]: --ar 3:4`
+            },
+            {
+                id: 'nbp3',
+                title: 'Nano Banana Pro 角色一致性',
+                category: 'visual',
+                desc: '[专家模式] 绘制四宫格或连续画面，展现同一角色在不同情绪或动作下的连贯性。',
+                content: `# Role: 动画分镜师
+你正在为一个特定的动漫角色「{{角色描述}}」创作情绪板。
+
+# Task:
+以四宫格的形式，表现该角色在以下四种状态下的高度一致性：
+1. **喜悦**：角色正在微笑，阳光洒在脸上。
+2. **思考**：角色托腮，眼神深邃。
+3. **惊讶**：角色睁大眼睛，背景有动感线条。
+4. **发力**：角色正在奔跑或做出战斗姿态。
+
+# Requirements:
+- 人物面部特征、发型、服装必须在四个分镜中保持严格一致。
+- 统一的{{画风描述}}风格，史诗级光影。`
             },
             // Video / Script
             {
