@@ -377,7 +377,7 @@
 
     <header>
         <div class="header-main">
-            <h1 id="app-title">AI Prompt Library <span class="version-badge">v2.3</span></h1>
+            <h1 id="app-title">AI Prompt Library <span class="version-badge">v2.4</span></h1>
             <div style="display:flex; gap:10px; align-items:center;">
                 <button class="lang-switch-btn" onclick="toggleLang()" id="lang-btn">CN / EN</button>
             </div>
@@ -675,6 +675,49 @@ Create a thread explaining「{{topic}}」to a general audience.
 | 15-45秒 | 核心干货 | 价值输出 |
 | 45-55秒 | 惊喜反转 | 记忆强化 |
 | 55-60秒 | 行动号召 | 互动转化 |`
+            },
+            // --- Chinese AI Visual (国内主流绘图) ---
+            {
+                id: 'cn_jm1',
+                title: '即梦 (Jimeng) 创意艺术',
+                category: 'visual',
+                desc: '适用于即梦AI，擅长电影感叙事、国风插画及二次元风格。',
+                content: `[主体描述]：{{主体}}
+[风格]：超现实主义，电影感光效，唯美华丽
+[细节]：精细的纹理，丰富的色彩层次，史诗级构图
+[比例]：--ar 16:9
+[提示]：即梦对中文理解极佳，可以直接描述意境，如“大漠孤烟直”的现代艺术诠释。`
+            },
+            {
+                id: 'cn_kl1',
+                title: '可灵 (Kling) 影视级写真',
+                category: 'visual',
+                desc: '利用可灵强大的现实模拟能力，生成照片级实时摄影或电影画面。',
+                content: `[场景]：{{场景描述}}
+[镜头]：特写镜头，大光圈虚化，8k分辨率
+[质感]：极其真实的皮肤纹理，复杂的自然光影，照片级细节
+[属性]：写实风格，专业摄影灯光
+[比例]：--ar 3:4`
+            },
+            {
+                id: 'cn_db1',
+                title: '豆包 (Doubao) 生活方式摄影',
+                category: 'visual',
+                desc: '针对豆包绘画模型优化，擅长捕捉中国生活化场景、写实人物和时尚街拍。',
+                content: `[核心]：一个{{人物/场景}}在{{地点}}
+[氛围]：温暖的阳光，烟火气，真实的胶片质感
+[穿搭/细节]：高级感配色，现代中式风格
+[质量]：大师级摄影，构图完美，细节丰富`
+            },
+            {
+                id: 'cn_qw1',
+                title: '通义万相 (Qianwen) 商业设计',
+                category: 'visual',
+                desc: '适用于阿里通义万相，擅长3D渲染、海报设计、IP形象制作。',
+                content: `[类型]：C4D风格/3D渲染/商业插画
+[内容]：{{产品或角色描述}}
+[效果]：盲盒质感，磨砂塑料，明亮的排版，高饱和度色彩
+[应用]：电商海报风格，专业灯光布局`
             },
             // Visual
             {
