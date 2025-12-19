@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ai-prompts-v2.1';
+const CACHE_NAME = 'ai-prompts-v2.6';
 const ASSETS = [
     './mobile-app-v2.html',
     './manifest-v2.json'
