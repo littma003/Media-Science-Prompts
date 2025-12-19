@@ -466,7 +466,7 @@
 
     <header>
         <div class="header-main">
-            <h1>Prompts 2.0 <span class="version-badge">v2.6 Stable</span></h1>
+            <h1>Prompts 2.0 <span class="version-badge">v2.7 Stable</span></h1>
             <button class="lang-switch-btn" onclick="toggleLang()" id="lang-btn">EN / 中文</button>
         </div>
         <div class="search-bar">
@@ -593,6 +593,43 @@
             },
             // --- WeChat Official Account (公众号专家模式) ---
             {
+                id: 'oa_sci1',
+                title: '公众号：三联风深度科普',
+                category: 'text',
+                desc: '[专家特调] 模拟《三联生活周刊》资深编辑风格，产出高质感、有深度的科学故事。',
+                content: `# 角色设定
+你是一位曾在《三联生活周刊》担任科学编辑的资深科普作家，擅长将复杂的科学概念转化为生动有趣的故事。
+
+# 任务
+撰写一篇关于「{{主题}}」的科普文章。
+
+# 读者画像
+- 年龄：25-45岁
+- 教育背景：大学本科
+- 专业知识：对该领域了解有限
+- 阅读场景：碎片化阅读(地铁/睡前)
+
+# 输出要求
+## 结构
+1. **开篇钩子**(80字)：用一个反常识的事实或有趣的问题开场。
+2. **背景铺垫**(150字)：为什么这个话题重要/有趣。
+3. **核心内容**(800-1300字)：分3-4个小节深入浅出讲解。
+4. **现实意义**(200字)：这对读者意味着什么。
+5. **结尾升华**(100字)：留下思考或金句。
+
+## 风格
+- 专业度：***** (通俗但不失专业)
+- 趣味度：**** (有故事，有比喻)
+- 严谨度：***** (每个事实可查证)
+
+## 约束
+- 禁止使用「让我们来看看」「众所周知」等套话。
+- 专业术语首次出现时必须解释。
+- 每个数据标注来源。
+- 比喻需与日常生活相关。`,
+                tags: ['Science', 'Sanlian', 'Expert']
+            },
+            {
                 id: 'oa1',
                 title: '公众号「必点」爆款标题组',
                 category: 'text',
@@ -678,7 +715,7 @@
 
         function setLanguage(lang) {
             const t = i18n[lang];
-            document.querySelector('h1').innerHTML = `Prompts 2.0 <span class="version-badge">v2.6 Stable</span>`;
+            document.querySelector('h1').innerHTML = `Prompts 2.0 <span class="version-badge">v2.7 Stable</span>`;
             document.getElementById('searchInput').placeholder = t.searchPlaceholder;
             document.getElementById('btn-done').innerText = t.done;
             document.getElementById('btn-copy').innerText = t.copy;
